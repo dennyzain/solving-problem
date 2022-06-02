@@ -1,4 +1,4 @@
-export default function solution(roman: string): number {
+export default function RomanNumeralsDecoder(roman: string): number {
   type romanRulesTypes = { [key: string]: number };
   const romanRules: romanRulesTypes = {
     I: 1,
@@ -10,10 +10,14 @@ export default function solution(roman: string): number {
     M: 1000,
   };
   let result = 0;
+
   for (let i = 0; i < roman.length; i++) {
-    const romanUppercase = roman[i].toUpperCase();
-    result += romanRules[romanUppercase];
-    console.log('onsdasdsad');
+    if (romanRules[roman[i]] < romanRules[roman[i + 1]]) {
+      result += romanRules[roman[i + 1]] - romanRules[roman[i]];
+      break;
+    } else {
+      result += romanRules[roman[i]];
+    }
   }
   return result;
 }
