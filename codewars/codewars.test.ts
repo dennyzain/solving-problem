@@ -2,15 +2,18 @@ import RomanNumeralsDecoder from './RomanNumeralsDecoder';
 import isValidWalk from './TakeATenMinutesWalk';
 
 //  ! -------------- RomanNumeralsDecoder --------------
+
 test('XXI should be 21', () => {
   expect(RomanNumeralsDecoder('XXI')).toBe(21);
 });
+
 test('IV should be 4', () => {
   expect(RomanNumeralsDecoder('IV')).toBe(4);
 });
-// test('IIV should be 3', () => {
-//   expect(RomanNumeralsDecoder('IIV')).toBe(3);
-// });
+
+test('IIV should be 3', () => {
+  expect(RomanNumeralsDecoder('IIV')).toBe(3);
+});
 
 //  ! -------------- Take a Ten Minutes Walk --------------
 
