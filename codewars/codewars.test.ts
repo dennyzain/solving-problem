@@ -1,4 +1,5 @@
 import RomanNumeralsDecoder from './RomanNumeralsDecoder';
+import findShort from './ShortestWord';
 import isValidWalk from './TakeATenMinutesWalk';
 
 //  ! -------------- RomanNumeralsDecoder --------------
@@ -11,9 +12,9 @@ test('IV should be 4', () => {
   expect(RomanNumeralsDecoder('IV')).toBe(4);
 });
 
-test('IIV should be 3', () => {
-  expect(RomanNumeralsDecoder('IIV')).toBe(3);
-});
+// test('IIV should be 3', () => {
+//   expect(RomanNumeralsDecoder('IIV')).toBe(3);
+// });
 
 //  ! -------------- Take a Ten Minutes Walk --------------
 
@@ -31,4 +32,30 @@ test('is valid walk? case3', () => {
 
 test('is valid walk? case4', () => {
   expect(isValidWalk(['w'])).toBe(false);
+});
+
+//  ! -------------- Shortest Word --------------
+
+test('Should return the length of the shortest word(s)', () => {
+  expect(findShort('bitcoin take over the world maybe who knows perhaps')).toBe(3);
+});
+
+test('Should return the length of the shortest word(s)', () => {
+  expect(findShort('turns out random test cases are easier than writing out basic ones')).toBe(3);
+});
+
+test('Should return the length of the shortest word(s)', () => {
+  expect(findShort('lets talk about javascript the best language')).toBe(3);
+});
+
+test('Should return the length of the shortest word(s)', () => {
+  expect(findShort('i want to travel the world writing code one day')).toBe(1);
+});
+
+test('Should return the length of the shortest word(s)', () => {
+  expect(findShort('Lets all go on holiday somewhere very cold')).toBe(2);
+});
+
+test('Should return the length of the shortest word(s)', () => {
+  expect(findShort("Let's travel abroad shall we")).toBe(2);
 });
