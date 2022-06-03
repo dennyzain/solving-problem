@@ -1,9 +1,9 @@
 export default function isValidWalk(walk: string[]) {
-  var dx = 0;
-  var dy = 0;
-  var dt = walk.length;
+  let dx = 0;
+  let dy = 0;
+  const dt = walk.length;
 
-  for (var i = 0; i < walk.length; i++) {
+  for (let i = 0; i < walk.length; i++) {
     switch (walk[i]) {
       case 'n':
         dy--;
