@@ -1,3 +1,4 @@
+import longestConsec from './ConsecutiveStrings';
 import RomanNumeralsDecoder from './RomanNumeralsDecoder';
 import findShort from './ShortestWord';
 import isValidWalk from './TakeATenMinutesWalk';
@@ -58,4 +59,27 @@ test('Should return the length of the shortest word(s)', () => {
 
 test('Should return the length of the shortest word(s)', () => {
   expect(findShort("Let's travel abroad shall we")).toBe(2);
+});
+
+//  ! -------------- Consecutive Strings --------------
+
+test('should be return longest from array of string', () => {
+  expect(longestConsec(['zone', 'abigail', 'theta', 'form', 'libe', 'zas'], 2)).toBe(
+    'abigailtheta'
+  );
+});
+
+test('should be return longest from array of string', () => {
+  expect(
+    longestConsec(
+      ['ejjjjmmtthh', 'zxxuueeg', 'aanlljrrrxx', 'dqqqaaabbb', 'oocccffuucccjjjkkkjyyyeehh'],
+      1
+    )
+  ).toBe('oocccffuucccjjjkkkjyyyeehh');
+});
+
+test('should be return longest from array of string', () => {
+  expect(longestConsec(['it', 'wkppv', 'ixoyx', '3452', 'zzzzzzzzzzzz'], 3)).toBe(
+    'ixoyx3452zzzzzzzzzzzz'
+  );
 });
